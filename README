@@ -1,0 +1,18 @@
+Connection:
+	from pyModbusTCP.client import ModbusClient
+	c = ModbusClient(host='192.168.200.104',auto_open=True,auto_close=True);
+	c = ModbusClient(host='192.168.200.129',auto_open=True,auto_close=True);
+
+Reset watchdog:
+        c0.open()
+        c0.write_single_register(0x1121,0xbecf)
+        c0.write_single_register(0x1121,0xaffe)
+        c0.close()
+        startu.status()
+
+        print("Watchdog time: ", c.read_holding_registers(0x1020))
+
+Number of digital outputs
+	c.read_holding_registers(0x1012)
+Number of digital inputs
+	c.read_holding_registers(0x1013)
