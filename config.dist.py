@@ -6,8 +6,8 @@ controllers = {
 # Mqtt servera IP adrese
 mqtt_host = '127.0.0.1'
 mqtt_port = 1883
-mqtt_user = username
-mqtt_pass = PASSWORD
+mqtt_user = 'username'
+mqtt_pass = 'PASSWORD'
 mqtt_controller_name = 'lightcontrol'
 
 # Laiks sekundēs starp impulsa slēdža ieslēgšanu un izslēgšanu
