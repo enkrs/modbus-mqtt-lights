@@ -23,6 +23,7 @@ logging.basicConfig(
 
 mqttc = mqtt.Client()
 logger.debug("Connecting to mqtt server")
+mqttc.username_pw_set(config.mqtt_user, config.mqtt_pass)
 mqttc.connect(config.mqtt_host, config.mqtt_port)
 mqttc.loop_start()
 

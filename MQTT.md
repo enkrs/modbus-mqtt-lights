@@ -45,4 +45,3 @@ Testing with mosquitto:
 ```
     mosquitto_sub -t "#" --debug
 ```
-
